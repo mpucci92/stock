@@ -1,0 +1,58 @@
+1. Go on Google Cloud Platform and Create a VM and a Project
+2. Copy the JSON key and set the GOOGLE_APPLICATION_CREDENTIALS 
+3. To set the credentials: 
+	export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/my-key.json" (Note: this is the path to the json key).
+4. Fork repository from Professor - clone local copy - sync to his repo 
+(Follow steps on this URL: https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+5. Begin by creating the dependecies needed for the project, so channels, pip installations and dependecies. 
+6. Create a environment.yml file to do this. 
+7. Follow this steps to activate the conda environment from the yaml file. 
+
+Use the terminal or an Anaconda Prompt for the following steps:
+
+Create the environment from the environment.yml file:
+
+	conda env create -f environment.yml
+The first line of the yml file sets the new environment's name. For details see Creating an environment file manually.
+
+Activate the new environment: 
+	conda activate myenv
+
+Verify that the new environment was installed correctly:
+
+	conda env list
+8. Create Yaml file from the conda environment 
+	conda env export | grep -v "prefix:" > environment.yml 
+	
+9. which python command -> after activating conda environment - can see the new one. 
+
+10. Commit and push the environment.yml - so any changes 
+git status 
+.gitignore: Things to ignore and never put it in Git. 
+git add .gitignore (to add - since you made a change to it) 
+git add environemnt.yml (to add - since you made a change to it)
+git commit -m "adding environment.yml" (commit to master)
+
+But this is on the local github.
+git pull (check if anything has changed)
+git push (this is to the linked git)
+
+Note git add and git comment can be mended in one git commit -am command.
+
+11. Adding conda environment to PyCharm
+you can add the conda environment through interpreter of the project. 
+
+12. Google cloud to link github to the Cloud Build (triggers) 
+Cloud Build - Create Trigger (rule to know when to run the build) - Push to a branch 
+- follow steps to connect repository - Create push trigger (Thats it)!
+
+13. Once Artifact is built, need to add flask server to the environment.yml
+
+14. Adding routes to flask the route fucntion is what will show when you perform your query.
+@App.route('/toto'):
+def hi():
+blah blah blah
+Need to restart the server to take in changes, and you can create routes as many as you want. 
+
+15. Link the web server to start when the docker image is started. 
+Copy . .
