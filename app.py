@@ -15,9 +15,12 @@ def hello():
 
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
 def get_stock_value(ticker):
-    prediction = main_function(str(ticker))
+    prediction = main_function(str(ticker))[0]
+    lastprice = main_function(str(ticker))[1]
+    ba = main_function(str(ticker))[2]
     
-    return render_template("index.html",title=prediction)
+    
+    return render_template("index.html",title=prediction,balanced_accuracy=ba,last_price=lastprice)
     
 
 
