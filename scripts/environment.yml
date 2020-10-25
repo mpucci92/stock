@@ -151,4 +151,41 @@ dependencies:
     - wrapt==1.12.1
     - yahoo-fin==0.8.6
     - yarl==1.6.0
-
+    - pandas==1.1.0
+    - libtiff==4.1.0
+    - win_inet_pton==1.1.0
+    - vs2015_runtime==14.16.27012
+    - pyqt==5.9.2
+    - freetype==2.10.2
+    - mkl-service==2.3.0
+    - cffi==1.14.3
+    - cryptography==3.1.1
+    - xz==5.2.5
+    - sip==4.19.20
+    - sqlite==3.33.0
+    - zstd==1.4.5
+    - qt==5.9.7
+    - jpeg==9b
+    - zeromq==4.3.2
+    - pillow==7.2.0
+    - lz4-c==1.9.2
+    - tk==8.6.10
+    - mkl==2019.4
+    - matplotlib-base==3.3.1
+    - pyzmq==19.0.2
+    - vc==14.1
+    - python==3.8.5
+    - pywin32==227
+    - zlib==1.2.11
+    - kiwisolver==1.2.0
+    - scikit-learn==0.23.2
+    - icc_rt==2019.0.0
+    - intel-openmp==2019.4
+    - icu==58.2
+    - openssl==1.1.1h
+    - tornado==6.0.4
+    - wincertstore==0.2
+    - brotlipy==0.7.0
+    - markupsafe==1.1.1
+    - libpng==1.6.37
+    - libsodium==1.0.18
