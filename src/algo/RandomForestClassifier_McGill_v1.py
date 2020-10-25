@@ -180,6 +180,7 @@ class TimeBasedCV(object):
 def main_function(ticker):
 
     df = get_last_stock_price(ticker)
+    df1 = get_last_stock_price(ticker)
     df = df.reset_index()
     df.columns = ['timestamp', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker']
 
@@ -262,7 +263,14 @@ def main_function(ticker):
         print('Tomorrow Predicition: SELL')
         positions = "SELL"
 
-    return positions
+    last_price = df1.adjclose.iloc[-1]
+    latest_price = "{:.2f}".format(last_price)
+    average_validation_score = (100 * np.mean(validation_scores))
+    avg_vscore = "{:.2f}".format(average_validation_score)
+
+    return positions, latest_price, avg_vscore
+
+
 
 # if __name__ == '__main__':
 #     main_function('AAPL')
